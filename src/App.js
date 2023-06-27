@@ -1,9 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
-import styled from "styled-components";
+import Router from "./shared/Router";
+import {app} from "./firebase";
 
 function App() {
-  return <div></div>;
+  return <Router />;
 }
 
 export default App;
