@@ -1,15 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
-import styled from "styled-components";
-import GlobalStyle from "./GlobalStyle";
+import Router from "./shared/Router";
+import {app} from "./firebase";
 
 function App() {
-  return (
-    <>
-      <GlobalStyle />
-      <h1>안녕하세요</h1>
-    </>
-  );
+  return <Router />;
 }
 
 export default App;
