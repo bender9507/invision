@@ -18,7 +18,7 @@ function Header() {
     font-weight: bold;
   `;
 
-  const INPUTBOX_ST = styled.div`
+  const FORM_ST = styled.form`
     width: 70%;
     position: relative;
     display: flex;
@@ -54,14 +54,15 @@ function Header() {
   return (
     <HEADER_ST>
       <H1_ST>In-VISION</H1_ST>
-      <INPUTBOX_ST>
-        <SEARCHICON_ST
-          src={searchIcon}
-          alt="돋보기 아이콘"
-          onClick={() => alert("아직 개발 중 입니다.")}
-        />
+      <FORM_ST
+        onSubmit={(event) => {
+          event.preventDefault();
+          alert("개발 중입니다.");
+        }}
+      >
+        <SEARCHICON_ST src={searchIcon} alt="돋보기 아이콘" />
         <INPUT_ST type="text" placeholder="어떤 걸 찾으시나요?" />
-      </INPUTBOX_ST>
+      </FORM_ST>
       <RIGHTBOX_ST>
         <Button>글쓰기</Button>
         <Link to={`/showdetail`}>
