@@ -1,26 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../components/Header";
+import Login from "../components/Login";
 
 function Mypage() {
   return (
     <>
       <Header />
       <Layout>
+        <Login></Login>
         <Inner>
-          <ProfileWrap>
+          <ProfileWrapper>
             <ProfileImg></ProfileImg>
             <ProfileName>김선익</ProfileName>
             <ProfileId>@seonik</ProfileId>
             <ProfileEditButton>설정</ProfileEditButton>
-          </ProfileWrap>
+          </ProfileWrapper>
 
-          <FeedWrap>
+          <FeedWrapper>
             <FeedTitle>
               피드<FeedBadge>7</FeedBadge>
             </FeedTitle>
 
-            <FeedCardWrap>
+            <FeedCardWrapper>
               <FeedCard>
                 <FeedCardFigure>
                   <FeedCardImg></FeedCardImg>
@@ -29,8 +31,8 @@ function Mypage() {
 
                 <FeedCardTitle>미니멀리즘을 추구하는 조명</FeedCardTitle>
               </FeedCard>
-            </FeedCardWrap>
-          </FeedWrap>
+            </FeedCardWrapper>
+          </FeedWrapper>
         </Inner>
       </Layout>
     </>
@@ -48,7 +50,7 @@ const Inner = styled.div`
   box-sizing: border-box;
 `;
 
-const ProfileWrap = styled.div`
+const ProfileWrapper = styled.div`
   width: inherit;
   text-align: center;
 `;
@@ -94,7 +96,7 @@ const ProfileEditButton = styled.button`
   }
 `;
 
-const FeedWrap = styled.div`
+const FeedWrapper = styled.div`
   width: 100%;
   margin-top: 50px;
 `;
@@ -111,10 +113,10 @@ const FeedBadge = styled.span`
   margin-left: 5px;
 `;
 
-const FeedCardWrap = styled.div`
+const FeedCardWrapper = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
   grid-gap: 12px;
   margin-top: 18px;
 `;
