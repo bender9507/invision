@@ -1,10 +1,10 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { addDoc, collection, getDocs, query } from "firebase/firestore";
-import { useEffect, useState } from "react";
-import { db } from "../firebase";
+import {useNavigate} from "react-router-dom";
+import {addDoc, collection, getDocs, query} from "firebase/firestore";
+import {useEffect, useState} from "react";
+import {db} from "../firebase";
 import styled from "styled-components";
-import { doc, getDoc } from "firebase/firestore";
+import {doc, getDoc} from "firebase/firestore";
 
 function ShowDetail() {
   const navigate = useNavigate();
@@ -70,7 +70,7 @@ function ShowDetail() {
   const [text, setText] = useState("");
   const onChange = (event) => {
     const {
-      target: { name, value },
+      target: {name, value},
     } = event;
     if (name === "text") {
       setText(value);
@@ -80,7 +80,7 @@ function ShowDetail() {
   //데이터 추가
   const addComment = async (event) => {
     event.preventDefault();
-    const newComment = { text: text };
+    const newComment = {text: text};
     setComments((prev) => {
       return [...comments, newComment];
     });
@@ -136,14 +136,7 @@ function ShowDetail() {
 
                 <div>
                   <ListBoxForm onSubmit={addComment}>
-                    <FormInput
-                      type="text"
-                      placeholder="leave comment"
-                      value={text}
-                      name="text"
-                      onChange={onChange}
-                      required
-                    ></FormInput>
+                    <FormInput type="text" placeholder="leave comment" value={text} name="text" onChange={onChange} required></FormInput>
                     {/* <FormButton>✏️</FormButton> */}
                   </ListBoxForm>
                 </div>
@@ -350,10 +343,9 @@ const UserImg = styled.img`
 /* object-fit: contain; */
 
 const UserImgBox = styled.div`
-  width:50px
-  height: 50px
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   border-radius: 50px;
-  margin-right: 10px
-
+  margin-right: 10px;
 `;
