@@ -93,7 +93,7 @@ const Login = () => {
 
             <LoginButton onClick={signIn}>로그인</LoginButton>
             <SignUpButton onClick={signUp}>회원가입</SignUpButton>
-            <button onClick={logOut}>로그아웃</button>
+            <LogoutButton onClick={logOut}>로그아웃</LogoutButton>
           </form>
         </LoginWrapper>
       </Layout>
@@ -140,7 +140,7 @@ const LoginLabel = styled.label`
   margin-bottom: 5px;
 `;
 
-const LoginInput = styled.input`
+const LoginInput = styled.input.attrs({required: true})`
   width: 100%;
   font-size: 16px;
   padding: 14px 16px;
@@ -179,6 +179,12 @@ const SignUpButton = styled.button`
   font-size: 16px;
   font-weight: 700;
   margin-top: 24px;
+`;
+
+const LogoutButton = styled.button`
+  font-size: 16px;
+  font-weight: 700;
+  color: #999;
 `;
 
 export default Login;
