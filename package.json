@@ -1,7 +1,4 @@
 {
-  "optionalDependencies": {
-    "fsevents": "*"
-  },
   "name": "invision",
   "version": "0.1.0",
   "private": true,
